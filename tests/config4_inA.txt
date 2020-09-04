@@ -1,0 +1,13 @@
+display
+toggle CB
+toggle Light1
+toggle Light2
+toggle Toaster
+connect Appliance Vacuum O_A 4
+display
+toggle Vacuum
+toggle Light1
+toggle CB
+display
+toggle Vacuum
+quit

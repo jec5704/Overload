@@ -1,0 +1,7 @@
+PowerSource Home
+CircuitBreaker CB Home 15
+Outlet O_A CB
+Outlet O_B CB
+Appliance Light1 O_A 1
+Appliance Light2 O_A 1
+Appliance Toaster O_B 10

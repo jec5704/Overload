@@ -1,0 +1,57 @@
+Overload Project, CS2
+PowerSource Root(draw 0): creating
+CircuitBreaker Breaker1(off; draw 0; limit 0): creating
+PowerSource Root(draw 0) attaching--> CircuitBreaker Breaker1(off; draw 0; limit 0)
+CircuitBreaker Breaker2(off; draw 0; limit 0): creating
+PowerSource Root(draw 0) attaching--> CircuitBreaker Breaker2(off; draw 0; limit 0)
+Outlet Outlet1A(draw 0): creating
+CircuitBreaker Breaker1(off; draw 0; limit 15) attaching--> Outlet Outlet1A(draw 0)
+Outlet Outlet1B(draw 0): creating
+CircuitBreaker Breaker1(off; draw 0; limit 15) attaching--> Outlet Outlet1B(draw 0)
+Outlet Outlet2A(draw 0): creating
+CircuitBreaker Breaker2(off; draw 0; limit 25) attaching--> Outlet Outlet2A(draw 0)
+Outlet Outlet2B(draw 0): creating
+CircuitBreaker Breaker2(off; draw 0; limit 25) attaching--> Outlet Outlet2B(draw 0)
+Appliance Light1(off; rating 0): creating
+Outlet Outlet1A(draw 0) attaching--> Appliance Light1(off; rating 0)
+Appliance Light2(off; rating 0): creating
+Outlet Outlet1A(draw 0) attaching--> Appliance Light2(off; rating 0)
+Appliance Light3(off; rating 0): creating
+Outlet Outlet1B(draw 0) attaching--> Appliance Light3(off; rating 0)
+Appliance Heater(off; rating 0): creating
+Outlet Outlet1B(draw 0) attaching--> Appliance Heater(off; rating 0)
+Appliance ECar1(off; rating 0): creating
+Outlet Outlet2A(draw 0) attaching--> Appliance ECar1(off; rating 0)
+Appliance ECar2(off; rating 0): creating
+Outlet Outlet2A(draw 0) attaching--> Appliance ECar2(off; rating 0)
+Appliance ECar3(off; rating 0): creating
+Outlet Outlet2B(draw 0) attaching--> Appliance ECar3(off; rating 0)
+Appliance ECar4(off; rating 0): creating
+Outlet Outlet2B(draw 0) attaching--> Appliance ECar4(off; rating 0)
+15 components created.
+Starting up the main circuit(s).
+PowerSource Root(draw 0): powering up
+PowerSource Root(draw 0): engaging
+CircuitBreaker Breaker1(off; draw 0; limit 15): engaging
+CircuitBreaker Breaker2(off; draw 0; limit 25): engaging
+? display
+ -> display[]
+
++ PowerSource Root(draw 0)
+    + CircuitBreaker Breaker1(off; draw 0; limit 15)
+        + Outlet Outlet1A(draw 0)
+            + Appliance Light1(off; rating 1)
+            + Appliance Light2(off; rating 1)
+        + Outlet Outlet1B(draw 0)
+            + Appliance Light3(off; rating 1)
+            + Appliance Heater(off; rating 13)
+    + CircuitBreaker Breaker2(off; draw 0; limit 25)
+        + Outlet Outlet2A(draw 0)
+            + Appliance ECar1(off; rating 7)
+            + Appliance ECar2(off; rating 7)
+        + Outlet Outlet2B(draw 0)
+            + Appliance ECar3(off; rating 7)
+            + Appliance ECar4(off; rating 7)
+
+? quit
+ -> quit[]

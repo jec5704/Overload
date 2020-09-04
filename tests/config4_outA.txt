@@ -1,0 +1,125 @@
+Overload Project, CS2
+PowerSource Home(draw 0): creating
+CircuitBreaker CB(off; draw 0; limit 0): creating
+PowerSource Home(draw 0) attaching--> CircuitBreaker CB(off; draw 0; limit 0)
+Outlet O_A(draw 0): creating
+CircuitBreaker CB(off; draw 0; limit 15) attaching--> Outlet O_A(draw 0)
+Outlet O_B(draw 0): creating
+CircuitBreaker CB(off; draw 0; limit 15) attaching--> Outlet O_B(draw 0)
+Appliance Light1(off; rating 0): creating
+Outlet O_A(draw 0) attaching--> Appliance Light1(off; rating 0)
+Appliance Light2(off; rating 0): creating
+Outlet O_A(draw 0) attaching--> Appliance Light2(off; rating 0)
+Appliance Toaster(off; rating 0): creating
+Outlet O_B(draw 0) attaching--> Appliance Toaster(off; rating 0)
+7 components created.
+Starting up the main circuit(s).
+PowerSource Home(draw 0): powering up
+PowerSource Home(draw 0): engaging
+CircuitBreaker CB(off; draw 0; limit 15): engaging
+?  -> display[]
+
++ PowerSource Home(draw 0)
+    + CircuitBreaker CB(off; draw 0; limit 15)
+        + Outlet O_A(draw 0)
+            + Appliance Light1(off; rating 1)
+            + Appliance Light2(off; rating 1)
+        + Outlet O_B(draw 0)
+            + Appliance Toaster(off; rating 10)
+
+?  -> toggle[CB]
+CircuitBreaker CB(on; draw 0; limit 15): switching on
+Outlet O_A(draw 0): engaging
+Appliance Light1(off; rating 1): engaging
+Appliance Light2(off; rating 1): engaging
+Outlet O_B(draw 0): engaging
+Appliance Toaster(off; rating 10): engaging
+?  -> toggle[Light1]
+Appliance Light1(on; rating 1): switching on
+Outlet O_A(draw 1): draw change 1
+CircuitBreaker CB(on; draw 1; limit 15): draw change 1
+PowerSource Home(draw 1): draw change 1
+?  -> toggle[Light2]
+Appliance Light2(on; rating 1): switching on
+Outlet O_A(draw 2): draw change 1
+CircuitBreaker CB(on; draw 2; limit 15): draw change 1
+PowerSource Home(draw 2): draw change 1
+?  -> toggle[Toaster]
+Appliance Toaster(on; rating 10): switching on
+Outlet O_B(draw 10): draw change 10
+CircuitBreaker CB(on; draw 12; limit 15): draw change 10
+PowerSource Home(draw 12): draw change 10
+?  -> connect[Appliance, Vacuum, O_A, 4]
+Appliance Vacuum(off; rating 0): creating
+Outlet O_A(draw 2) attaching--> Appliance Vacuum(off; rating 0)
+Appliance Vacuum(off; rating 0): engaging
+?  -> display[]
+
++ PowerSource Home(draw 12)
+    + CircuitBreaker CB(on; draw 12; limit 15)
+        + Outlet O_A(draw 2)
+            + Appliance Light1(on; rating 1)
+            + Appliance Light2(on; rating 1)
+            + Appliance Vacuum(off; rating 4)
+        + Outlet O_B(draw 10)
+            + Appliance Toaster(on; rating 10)
+
+?  -> toggle[Vacuum]
+Appliance Vacuum(on; rating 4): switching on
+Outlet O_A(draw 6): draw change 4
+CircuitBreaker CB(on; draw 16; limit 15): has blown; current would be 16
+CircuitBreaker CB(off; draw 16; limit 15): switching off
+PowerSource Home(draw 0): draw change -12
+Outlet O_A(draw 6): disengaging
+Appliance Light1(on; rating 1): disengaging
+Appliance Light1(on; rating 1): draw change -1
+Outlet O_A(draw 5): draw change -1
+Appliance Light2(on; rating 1): disengaging
+Appliance Light2(on; rating 1): draw change -1
+Outlet O_A(draw 4): draw change -1
+Appliance Vacuum(on; rating 4): disengaging
+Appliance Vacuum(on; rating 4): draw change -4
+Outlet O_A(draw 0): draw change -4
+Outlet O_B(draw 10): disengaging
+Appliance Toaster(on; rating 10): disengaging
+Appliance Toaster(on; rating 10): draw change -10
+Outlet O_B(draw 0): draw change -10
+?  -> toggle[Light1]
+Appliance Light1(off; rating 1): switching off
+?  -> toggle[CB]
+CircuitBreaker CB(on; draw 0; limit 15): switching on
+Outlet O_A(draw 0): engaging
+Appliance Light1(off; rating 1): engaging
+Appliance Light2(on; rating 1): engaging
+Appliance Light2(on; rating 1): draw change 1
+Outlet O_A(draw 1): draw change 1
+CircuitBreaker CB(on; draw 1; limit 15): draw change 1
+PowerSource Home(draw 1): draw change 1
+Appliance Vacuum(on; rating 4): engaging
+Appliance Vacuum(on; rating 4): draw change 4
+Outlet O_A(draw 5): draw change 4
+CircuitBreaker CB(on; draw 5; limit 15): draw change 4
+PowerSource Home(draw 5): draw change 4
+Outlet O_B(draw 0): engaging
+Appliance Toaster(on; rating 10): engaging
+Appliance Toaster(on; rating 10): draw change 10
+Outlet O_B(draw 10): draw change 10
+CircuitBreaker CB(on; draw 15; limit 15): draw change 10
+PowerSource Home(draw 15): draw change 10
+?  -> display[]
+
++ PowerSource Home(draw 15)
+    + CircuitBreaker CB(on; draw 15; limit 15)
+        + Outlet O_A(draw 5)
+            + Appliance Light1(off; rating 1)
+            + Appliance Light2(on; rating 1)
+            + Appliance Vacuum(on; rating 4)
+        + Outlet O_B(draw 10)
+            + Appliance Toaster(on; rating 10)
+
+?  -> toggle[Vacuum]
+Appliance Vacuum(off; rating 4): switching off
+Outlet O_A(draw 1): draw change -4
+CircuitBreaker CB(on; draw 11; limit 15): draw change -4
+PowerSource Home(draw 11): draw change -4
+?  -> quit[]

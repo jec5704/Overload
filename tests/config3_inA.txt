@@ -1,0 +1,11 @@
+toggle Breaker2
+toggle ECar1
+toggle Breaker1
+connect Appliance Radio Outlet1A 2
+toggle Radio
+toggle ECar2
+toggle ECar3
+toggle ECar4
+toggle ECar1
+toggle Breaker2
+quit

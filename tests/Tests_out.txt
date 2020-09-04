@@ -1,0 +1,335 @@
+Overload Project, CS2
+RUNNING ALL TESTS
+
+Test #1
+----------------
+
+PowerSource Root(draw 0): creating
+Appliance Radio(off; rating 0): creating
+PowerSource Root(draw 0) attaching--> Appliance Radio(off; rating 0)
+PowerSource Root(draw 0): engaging
+Appliance Radio(off; rating 10): engaging
+Appliance Radio(on; rating 10): switching on
+PowerSource Root(draw 10): draw change 10
+Appliance Radio(off; rating 10): switching off
+PowerSource Root(draw 0): draw change -10
+
+Test #2
+----------------
+
+PowerSource Root(draw 0): creating
+CircuitBreaker Breaker(off; draw 0; limit 0): creating
+PowerSource Root(draw 0) attaching--> CircuitBreaker Breaker(off; draw 0; limit 0)
+Outlet Outlet(draw 0): creating
+CircuitBreaker Breaker(off; draw 0; limit 15) attaching--> Outlet Outlet(draw 0)
+Appliance Heater(off; rating 0): creating
+Outlet Outlet(draw 0) attaching--> Appliance Heater(off; rating 0)
+Appliance Pump(off; rating 0): creating
+Outlet Outlet(draw 0) attaching--> Appliance Pump(off; rating 0)
+PowerSource Root(draw 0): engaging
+CircuitBreaker Breaker(off; draw 0; limit 15): engaging
+CircuitBreaker Breaker(on; draw 0; limit 15): switching on
+Outlet Outlet(draw 0): engaging
+Appliance Heater(off; rating 10): engaging
+Appliance Pump(off; rating 8): engaging
+Appliance Heater(on; rating 10): switching on
+Outlet Outlet(draw 10): draw change 10
+CircuitBreaker Breaker(on; draw 10; limit 15): draw change 10
+PowerSource Root(draw 10): draw change 10
+Appliance Pump(on; rating 8): switching on
+Outlet Outlet(draw 18): draw change 8
+CircuitBreaker Breaker(on; draw 18; limit 15): has blown; current would be 18
+CircuitBreaker Breaker(off; draw 18; limit 15): switching off
+PowerSource Root(draw 0): draw change -10
+Outlet Outlet(draw 18): disengaging
+Appliance Heater(on; rating 10): disengaging
+Appliance Heater(on; rating 10): draw change -10
+Outlet Outlet(draw 8): draw change -10
+Appliance Pump(on; rating 8): disengaging
+Appliance Pump(on; rating 8): draw change -8
+Outlet Outlet(draw 0): draw change -8
+Appliance Pump(off; rating 8): switching off
+CircuitBreaker Breaker(on; draw 0; limit 15): switching on
+Outlet Outlet(draw 0): engaging
+Appliance Heater(on; rating 10): engaging
+Appliance Heater(on; rating 10): draw change 10
+Outlet Outlet(draw 10): draw change 10
+CircuitBreaker Breaker(on; draw 10; limit 15): draw change 10
+PowerSource Root(draw 10): draw change 10
+Appliance Pump(off; rating 8): engaging
+
+Test #3
+----------------
+
+
+===== Connection Phase ==========
+PowerSource Root(draw 0): creating
+CircuitBreaker Breaker1(off; draw 0; limit 0): creating
+PowerSource Root(draw 0) attaching--> CircuitBreaker Breaker1(off; draw 0; limit 0)
+CircuitBreaker Breaker2(off; draw 0; limit 0): creating
+PowerSource Root(draw 0) attaching--> CircuitBreaker Breaker2(off; draw 0; limit 0)
+Outlet Outlet1A(draw 0): creating
+CircuitBreaker Breaker1(off; draw 0; limit 15) attaching--> Outlet Outlet1A(draw 0)
+Outlet Outlet1B(draw 0): creating
+CircuitBreaker Breaker1(off; draw 0; limit 15) attaching--> Outlet Outlet1B(draw 0)
+Outlet Outlet2A(draw 0): creating
+CircuitBreaker Breaker2(off; draw 0; limit 25) attaching--> Outlet Outlet2A(draw 0)
+Outlet Outlet2B(draw 0): creating
+CircuitBreaker Breaker2(off; draw 0; limit 25) attaching--> Outlet Outlet2B(draw 0)
+Appliance Light1(off; rating 0): creating
+Outlet Outlet1A(draw 0) attaching--> Appliance Light1(off; rating 0)
+Appliance Light2(off; rating 0): creating
+Outlet Outlet1A(draw 0) attaching--> Appliance Light2(off; rating 0)
+Appliance Light3(off; rating 0): creating
+Outlet Outlet1B(draw 0) attaching--> Appliance Light3(off; rating 0)
+Appliance Heater(off; rating 0): creating
+Outlet Outlet1B(draw 0) attaching--> Appliance Heater(off; rating 0)
+Appliance ECar1(off; rating 0): creating
+Outlet Outlet2A(draw 0) attaching--> Appliance ECar1(off; rating 0)
+Appliance ECar2(off; rating 0): creating
+Outlet Outlet2A(draw 0) attaching--> Appliance ECar2(off; rating 0)
+Appliance ECar3(off; rating 0): creating
+Outlet Outlet2B(draw 0) attaching--> Appliance ECar3(off; rating 0)
+Appliance ECar4(off; rating 0): creating
+Outlet Outlet2B(draw 0) attaching--> Appliance ECar4(off; rating 0)
+
++ PowerSource Root(draw 0)
+    + CircuitBreaker Breaker1(off; draw 0; limit 15)
+        + Outlet Outlet1A(draw 0)
+            + Appliance Light1(off; rating 1)
+            + Appliance Light2(off; rating 1)
+        + Outlet Outlet1B(draw 0)
+            + Appliance Light3(off; rating 1)
+            + Appliance Heater(off; rating 13)
+    + CircuitBreaker Breaker2(off; draw 0; limit 25)
+        + Outlet Outlet2A(draw 0)
+            + Appliance ECar1(off; rating 7)
+            + Appliance ECar2(off; rating 7)
+        + Outlet Outlet2B(draw 0)
+            + Appliance ECar3(off; rating 7)
+            + Appliance ECar4(off; rating 7)
+
+
+===== Circuit 1 Test Phase ==========
+PowerSource Root(draw 0): engaging
+CircuitBreaker Breaker1(off; draw 0; limit 15): engaging
+CircuitBreaker Breaker2(off; draw 0; limit 25): engaging
+CircuitBreaker Breaker1(on; draw 0; limit 15): switching on
+Outlet Outlet1A(draw 0): engaging
+Appliance Light1(off; rating 1): engaging
+Appliance Light2(off; rating 1): engaging
+Outlet Outlet1B(draw 0): engaging
+Appliance Light3(off; rating 1): engaging
+Appliance Heater(off; rating 13): engaging
+Appliance Light1(on; rating 1): switching on
+Outlet Outlet1A(draw 1): draw change 1
+CircuitBreaker Breaker1(on; draw 1; limit 15): draw change 1
+PowerSource Root(draw 1): draw change 1
+Appliance Light2(on; rating 1): switching on
+Outlet Outlet1A(draw 2): draw change 1
+CircuitBreaker Breaker1(on; draw 2; limit 15): draw change 1
+PowerSource Root(draw 2): draw change 1
+Appliance Light3(on; rating 1): switching on
+Outlet Outlet1B(draw 1): draw change 1
+CircuitBreaker Breaker1(on; draw 3; limit 15): draw change 1
+PowerSource Root(draw 3): draw change 1
+Appliance Heater(on; rating 13): switching on
+Outlet Outlet1B(draw 14): draw change 13
+CircuitBreaker Breaker1(on; draw 16; limit 15): has blown; current would be 16
+CircuitBreaker Breaker1(off; draw 16; limit 15): switching off
+PowerSource Root(draw 0): draw change -3
+Outlet Outlet1A(draw 2): disengaging
+Appliance Light1(on; rating 1): disengaging
+Appliance Light1(on; rating 1): draw change -1
+Outlet Outlet1A(draw 1): draw change -1
+Appliance Light2(on; rating 1): disengaging
+Appliance Light2(on; rating 1): draw change -1
+Outlet Outlet1A(draw 0): draw change -1
+Outlet Outlet1B(draw 14): disengaging
+Appliance Light3(on; rating 1): disengaging
+Appliance Light3(on; rating 1): draw change -1
+Outlet Outlet1B(draw 13): draw change -1
+Appliance Heater(on; rating 13): disengaging
+Appliance Heater(on; rating 13): draw change -13
+Outlet Outlet1B(draw 0): draw change -13
+
+===== Circuit 2 Overload Phase ==========
+CircuitBreaker Breaker2(on; draw 0; limit 25): switching on
+Outlet Outlet2A(draw 0): engaging
+Appliance ECar1(off; rating 7): engaging
+Appliance ECar2(off; rating 7): engaging
+Outlet Outlet2B(draw 0): engaging
+Appliance ECar3(off; rating 7): engaging
+Appliance ECar4(off; rating 7): engaging
+Appliance ECar3(on; rating 7): switching on
+Outlet Outlet2B(draw 7): draw change 7
+CircuitBreaker Breaker2(on; draw 7; limit 25): draw change 7
+PowerSource Root(draw 7): draw change 7
+Appliance ECar4(on; rating 7): switching on
+Outlet Outlet2B(draw 14): draw change 7
+CircuitBreaker Breaker2(on; draw 14; limit 25): draw change 7
+PowerSource Root(draw 14): draw change 7
+Appliance ECar1(on; rating 7): switching on
+Outlet Outlet2A(draw 7): draw change 7
+CircuitBreaker Breaker2(on; draw 21; limit 25): draw change 7
+PowerSource Root(draw 21): draw change 7
+Appliance ECar2(on; rating 7): switching on
+Outlet Outlet2A(draw 14): draw change 7
+CircuitBreaker Breaker2(on; draw 28; limit 25): has blown; current would be 28
+CircuitBreaker Breaker2(off; draw 28; limit 25): switching off
+PowerSource Root(draw 0): draw change -21
+Outlet Outlet2A(draw 14): disengaging
+Appliance ECar1(on; rating 7): disengaging
+Appliance ECar1(on; rating 7): draw change -7
+Outlet Outlet2A(draw 7): draw change -7
+Appliance ECar2(on; rating 7): disengaging
+Appliance ECar2(on; rating 7): draw change -7
+Outlet Outlet2A(draw 0): draw change -7
+Outlet Outlet2B(draw 14): disengaging
+Appliance ECar3(on; rating 7): disengaging
+Appliance ECar3(on; rating 7): draw change -7
+Outlet Outlet2B(draw 7): draw change -7
+Appliance ECar4(on; rating 7): disengaging
+Appliance ECar4(on; rating 7): draw change -7
+Outlet Outlet2B(draw 0): draw change -7
+
+===== Circuit 2 Turning things off ==========
+Appliance Light2(off; rating 1): switching off
+Appliance ECar3(off; rating 7): switching off
+
+===== Switching circuits back on ==========
+CircuitBreaker Breaker2(on; draw 0; limit 25): switching on
+Outlet Outlet2A(draw 0): engaging
+Appliance ECar1(on; rating 7): engaging
+Appliance ECar1(on; rating 7): draw change 7
+Outlet Outlet2A(draw 7): draw change 7
+CircuitBreaker Breaker2(on; draw 7; limit 25): draw change 7
+PowerSource Root(draw 7): draw change 7
+Appliance ECar2(on; rating 7): engaging
+Appliance ECar2(on; rating 7): draw change 7
+Outlet Outlet2A(draw 14): draw change 7
+CircuitBreaker Breaker2(on; draw 14; limit 25): draw change 7
+PowerSource Root(draw 14): draw change 7
+Outlet Outlet2B(draw 0): engaging
+Appliance ECar3(off; rating 7): engaging
+Appliance ECar4(on; rating 7): engaging
+Appliance ECar4(on; rating 7): draw change 7
+Outlet Outlet2B(draw 7): draw change 7
+CircuitBreaker Breaker2(on; draw 21; limit 25): draw change 7
+PowerSource Root(draw 21): draw change 7
+CircuitBreaker Breaker1(on; draw 0; limit 15): switching on
+Outlet Outlet1A(draw 0): engaging
+Appliance Light1(on; rating 1): engaging
+Appliance Light1(on; rating 1): draw change 1
+Outlet Outlet1A(draw 1): draw change 1
+CircuitBreaker Breaker1(on; draw 1; limit 15): draw change 1
+PowerSource Root(draw 22): draw change 1
+Appliance Light2(off; rating 1): engaging
+Outlet Outlet1B(draw 0): engaging
+Appliance Light3(on; rating 1): engaging
+Appliance Light3(on; rating 1): draw change 1
+Outlet Outlet1B(draw 1): draw change 1
+CircuitBreaker Breaker1(on; draw 2; limit 15): draw change 1
+PowerSource Root(draw 23): draw change 1
+Appliance Heater(on; rating 13): engaging
+Appliance Heater(on; rating 13): draw change 13
+Outlet Outlet1B(draw 14): draw change 13
+CircuitBreaker Breaker1(on; draw 15; limit 15): draw change 13
+PowerSource Root(draw 36): draw change 13
+
++ PowerSource Root(draw 36)
+    + CircuitBreaker Breaker1(on; draw 15; limit 15)
+        + Outlet Outlet1A(draw 1)
+            + Appliance Light1(on; rating 1)
+            + Appliance Light2(off; rating 1)
+        + Outlet Outlet1B(draw 14)
+            + Appliance Light3(on; rating 1)
+            + Appliance Heater(on; rating 13)
+    + CircuitBreaker Breaker2(on; draw 21; limit 25)
+        + Outlet Outlet2A(draw 14)
+            + Appliance ECar1(on; rating 7)
+            + Appliance ECar2(on; rating 7)
+        + Outlet Outlet2B(draw 7)
+            + Appliance ECar3(off; rating 7)
+            + Appliance ECar4(on; rating 7)
+
+
+Test #4
+----------------
+
+PowerSource Master1(draw 0): creating
+PowerSource Master2(draw 0): creating
+CircuitBreaker Breaker1(off; draw 0; limit 0): creating
+PowerSource Master1(draw 0) attaching--> CircuitBreaker Breaker1(off; draw 0; limit 0)
+CircuitBreaker Breaker2(off; draw 0; limit 0): creating
+PowerSource Master2(draw 0) attaching--> CircuitBreaker Breaker2(off; draw 0; limit 0)
+Outlet Outlet1(draw 0): creating
+CircuitBreaker Breaker1(off; draw 0; limit 20) attaching--> Outlet Outlet1(draw 0)
+Outlet Outlet2(draw 0): creating
+CircuitBreaker Breaker2(off; draw 0; limit 20) attaching--> Outlet Outlet2(draw 0)
+Appliance Radio(off; rating 0): creating
+Outlet Outlet1(draw 0) attaching--> Appliance Radio(off; rating 0)
+Appliance Lights(off; rating 0): creating
+Outlet Outlet2(draw 0) attaching--> Appliance Lights(off; rating 0)
+Appliance Flux Capacitor(off; rating 0): creating
+Outlet Outlet2(draw 0) attaching--> Appliance Flux Capacitor(off; rating 0)
+
++ PowerSource Master1(draw 0)
+    + CircuitBreaker Breaker1(off; draw 0; limit 20)
+        + Outlet Outlet1(draw 0)
+            + Appliance Radio(off; rating 10)
+
+
++ PowerSource Master2(draw 0)
+    + CircuitBreaker Breaker2(off; draw 0; limit 20)
+        + Outlet Outlet2(draw 0)
+            + Appliance Lights(off; rating 1)
+            + Appliance Flux Capacitor(off; rating 12000000)
+
+PowerSource Master1(draw 0): engaging
+CircuitBreaker Breaker1(off; draw 0; limit 20): engaging
+PowerSource Master2(draw 0): engaging
+CircuitBreaker Breaker2(off; draw 0; limit 20): engaging
+CircuitBreaker Breaker1(on; draw 0; limit 20): switching on
+Outlet Outlet1(draw 0): engaging
+Appliance Radio(off; rating 10): engaging
+Appliance Radio(on; rating 10): switching on
+Outlet Outlet1(draw 10): draw change 10
+CircuitBreaker Breaker1(on; draw 10; limit 20): draw change 10
+PowerSource Master1(draw 10): draw change 10
+Appliance Lights(on; rating 1): switching on
+
++ PowerSource Master2(draw 0)
+    + CircuitBreaker Breaker2(off; draw 0; limit 20)
+        + Outlet Outlet2(draw 0)
+            + Appliance Lights(on; rating 1)
+            + Appliance Flux Capacitor(off; rating 12000000)
+
+Appliance Flux Capacitor(on; rating 12000000): switching on
+CircuitBreaker Breaker2(on; draw 0; limit 20): switching on
+Outlet Outlet2(draw 0): engaging
+Appliance Lights(on; rating 1): engaging
+Appliance Lights(on; rating 1): draw change 1
+Outlet Outlet2(draw 1): draw change 1
+CircuitBreaker Breaker2(on; draw 1; limit 20): draw change 1
+PowerSource Master2(draw 1): draw change 1
+Appliance Flux Capacitor(on; rating 12000000): engaging
+Appliance Flux Capacitor(on; rating 12000000): draw change 12000000
+Outlet Outlet2(draw 12000001): draw change 12000000
+CircuitBreaker Breaker2(on; draw 12000001; limit 20): has blown; current would be 12000001
+CircuitBreaker Breaker2(off; draw 12000001; limit 20): switching off
+PowerSource Master2(draw 0): draw change -1
+Outlet Outlet2(draw 12000001): disengaging
+Appliance Lights(on; rating 1): disengaging
+Appliance Lights(on; rating 1): draw change -1
+Outlet Outlet2(draw 12000000): draw change -1
+Appliance Flux Capacitor(on; rating 12000000): disengaging
+Appliance Flux Capacitor(on; rating 12000000): draw change -12000000
+Outlet Outlet2(draw 0): draw change -12000000
+Appliance Flux Capacitor(off; rating 12000000): switching off
+Appliance Lights(off; rating 1): switching off
+CircuitBreaker Breaker2(on; draw 0; limit 20): switching on
+Outlet Outlet2(draw 0): engaging
+Appliance Lights(off; rating 1): engaging
+Appliance Flux Capacitor(off; rating 12000000): engaging
+

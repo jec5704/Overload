@@ -1,0 +1,15 @@
+PowerSource Root
+CircuitBreaker Breaker1 Root 15
+CircuitBreaker Breaker2 Root 25
+Outlet Outlet1A Breaker1
+Outlet Outlet1B Breaker1
+Outlet Outlet2A Breaker2
+Outlet Outlet2B Breaker2
+Appliance Light1 Outlet1A 1
+Appliance Light2 Outlet1A 1
+Appliance Light3 Outlet1B 1
+Appliance Heater Outlet1B 13
+Appliance ECar1 Outlet2A 7
+Appliance ECar2 Outlet2A 7
+Appliance ECar3 Outlet2B 7
+Appliance ECar4 Outlet2B 7
